@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width-device-width">
-	<title>Estructura con float</title>
+	<title>Estructura con inLine block</title>
 </head>
 <style>
 	/* Aquí va el código CSS */
@@ -33,14 +33,7 @@
     section {
         margin-bottom: 16px;
     }
-    .clearfix:after{
-        content:" ";
-        visibility: hidden;
-        display: block;
-        height: 0;
-        clear: both;
-    }
-
+   
     footer {
         background-color:darkgreen;
         width: 100%;
@@ -54,27 +47,29 @@
             height: 200px;
         }
         nav {
-            float:left;
+            display:inline-block;
             width: 20%;
-            height: 600px;         
+            height: 600px;
+            vertical-align: top;         
         }
         .column{
-            width: 78%;
-            float: left;
+            width: 77%;
+            display:inline-block;
             margin-left: 2%;
             height: auto;
+            vertical-align: top;  
         }
         .column section{
         height: 200px;
         }
         header {
             width: 100%;
-            float: left;
+            display:inline-block;
             background-color: green;
         }
         section {
             width: 100%;
-            float:left;
+            display:inline-block;
         }
         .column section:first-of-type{
             background-color: white;
@@ -100,10 +95,10 @@
     @media (min-width: 1400px) {
         /*aquí inicia las reglas para Desktop*/
         header{
-            background-color:white
+            background-color:red
         }
         .column section:first-of-type{
-            background-color: red;
+            background-color:yellow;
 
         .column section:nth-of-type(2){
             background-color:white;
@@ -116,7 +111,7 @@
 </style>
 
 <body>
-    <div class="container clearfix ">
+    <div class="container">
         <nav>
             <h1>Nav</h1>
         </nav>
